@@ -11,7 +11,7 @@ vector<int> insertSort (vector<int> array) {
         int x = array[i];
         int j = i - 1;
         // until we find an element which is smaller than x, iterate
-        // switching x and the element to tis left
+        // switching x and the element to its left
         while (j >= 0 && array[j] > x) {
             array[j+1] = array[j];
             j -= 1;
@@ -25,7 +25,7 @@ vector<int> insertSort (vector<int> array) {
 
 };
 
-int main() {
+int testInsertSort() {
     vector<int> testArray = {5,8,9,-1,2,4,64,2,7};
     cout << "Vector given: "<< vectorToString(testArray) << "\n";
     cout << "Vector sorted: "<< vectorToString(insertSort(testArray)) << "\n";
