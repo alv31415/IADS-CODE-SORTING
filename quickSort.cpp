@@ -1,4 +1,4 @@
-#include "helpers.h"
+#include "./headers/quickSort.h"
 
 using namespace std;
 
@@ -52,13 +52,16 @@ void quickSortIdx(vector<int> &A, int startIndex, int endIndex) {
     }
 }
 
-void quickSort(vector<int> A) {
-    quickSortIdx(A, 0, A.size()-1);
+vector<int> quickSort(vector<int> A) {
+    vector<int> ACopy = A;
+    quickSortIdx(ACopy, 0, ACopy.size()-1);
+
+    return ACopy;
 }
 
-int main() {
+void testQuickSort() {
     vector<int> testArray = {5,8,9,-1,2,4,64,2,7};
     cout << "Vector given: "<< vectorToString(testArray) << "\n";
-    quickSortIdx(testArray,0,8);
-    cout << "Vector sorted: "<< vectorToString(testArray) << "\n";
+    vector<int> ACopy = quickSort(testArray);
+    cout << "Vector sorted: "<< vectorToString(ACopy) << "\n";
 };
