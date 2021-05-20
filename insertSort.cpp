@@ -1,6 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <string>
 #include "helpers.h"
 
 using namespace std;
@@ -25,7 +22,7 @@ vector<int> insertSort (vector<int> array) {
 
 };
 
-int testInsertSort() {
+void testInsertSort() {
     vector<int> testArray = {5,8,9,-1,2,4,64,2,7};
     cout << "Vector given: "<< vectorToString(testArray) << "\n";
     cout << "Vector sorted: "<< vectorToString(insertSort(testArray)) << "\n";

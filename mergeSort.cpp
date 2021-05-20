@@ -1,6 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <string>
 #include <cmath>
 #include "helpers.h"
 
@@ -28,7 +25,7 @@ vector<int> merge (vector<int> B, vector<int> C) {
         }
     }
 
-    // add reamining elements of B or C, depending on which one has been terminated first
+    // add remaining elements of B or C, depending on which one has been terminated first
     if (i >= B.size()) {
         combined.insert(combined.end(), &C[j], &C[C.size()]);
     }
@@ -67,7 +64,7 @@ vector<int> mergeSort(vector<int> array) {
     return mergeSortIdx(array, 0, array.size());
 };
 
-int main() {
+void testMergeSort() {
     vector<int> testArray = {5,8,9,-1,2,4,64,2,7};
     cout << "Vector given: "<< vectorToString(testArray) << "\n";
     cout << "Vector sorted: "<< vectorToString(mergeSort(testArray)) << "\n";
