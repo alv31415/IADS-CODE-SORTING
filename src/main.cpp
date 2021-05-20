@@ -10,8 +10,16 @@ void testSorting() {
 
 int main() {
     
-    Sorter sortQuick("quick");
-    vector<int> testArray = sortQuick.generateVector(-20,20,10);
-    cout << "Vector Produced: "<< vectorToString(testArray) << "\n";
-    cout << "Vector Sorted: "<< vectorToString(sortQuick.sort(testArray)) << "\n";
+    Sorter sortQuick("insert");
+    
+    //vector<int> testArray = sortQuick.generateVector(-20,20,10);
+    //cout << "Vector Produced: "<< vectorToString(testArray) << "\n";
+    //vector<int> sorted = sortQuick.sortShowRuntime(testArray);
+    //cout << "Vector Sorted ("<< sortQuick.getSortType() << "): " << vectorToString(sorted) << "\n";
+
+    for (int i = 1; i <= 10; i++) {
+        tuple<vector<int>, vector<int>> results = sortQuick.sortShowRRuntime(-10000,10000, pow(2,i));
+        cout << "Vector Produced: "<< vectorToString(get<0>(results)) << "\n";
+        cout << "Vector Sorted ("<< sortQuick.getSortType() << "): " << vectorToString(get<1>(results)) << "\n";
+    }
 }
