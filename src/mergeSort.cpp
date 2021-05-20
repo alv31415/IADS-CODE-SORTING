@@ -1,4 +1,4 @@
-#include "./headers/mergeSort.h"
+#include "include/mergeSort.h"
 
 using namespace std;
 

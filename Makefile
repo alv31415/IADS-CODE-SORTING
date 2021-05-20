@@ -10,7 +10,7 @@ LDFLAGS =
 # Makefile settings - Can be customized.
 APPNAME = IADS-Code
 EXT = .cpp
-SRCDIR = /Users/antonioleonvillares/Desktop/Code/C++/IADS-CODE
+SRCDIR = ./src
 OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############

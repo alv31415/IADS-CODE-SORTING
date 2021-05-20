@@ -1,4 +1,4 @@
-#include "./headers/insertSort.h"
+#include "include/insertSort.h"
 
 using namespace std;
 
