@@ -131,7 +131,7 @@ vector<int> Sorter::sortShowRuntime(vector<int> array) {
 
     auto stop = chrono::high_resolution_clock::now();
 
-    auto duration = duration_cast<chrono::microseconds>(stop - start);
+    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
 
     cout << Sorter::printRuntime(array, duration.count());
 

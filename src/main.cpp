@@ -6,10 +6,7 @@ void testSorting() {
     cout << "Vector sorted (insert): "<< vectorToString(insertSort(testArray)) << "\n";
     cout << "Vector sorted (merge): "<< vectorToString(mergeSort(testArray)) << "\n";
     cout << "Vector sorted (quick): "<< vectorToString(quickSort(testArray)) << "\n";
-}
 
-int main() {
-    
     Sorter sortQuick("insert");
     
     //vector<int> testArray = sortQuick.generateVector(-20,20,10);
@@ -22,4 +19,10 @@ int main() {
         cout << "Vector Produced: "<< vectorToString(get<0>(results)) << "\n";
         cout << "Vector Sorted ("<< sortQuick.getSortType() << "): " << vectorToString(get<1>(results)) << "\n";
     }
+}
+
+int main() {
+    testSorting();
+    return 0;
+
 }
